@@ -1,0 +1,19 @@
+{
+  "name": "admin-panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npx json-server db.json",
+    "tailwind" : "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "json-server": "^1.0.0-beta.3",
+    "tailwindcss": "^4.1.12"
+  }
+}
