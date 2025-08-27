@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "clonerpwan",
+      "fullName": "Parsa Emami",
+      "email": "parsa.emami@example.com",
+      "avatar": "https://i.pravatar.cc/150?img=10",
+      "bio": "Fullstack developer and music lover.",
+      "location": "London, UK",
+      "followers": 120,
+      "following": 75,
+      "joined": "2023-05-12"
+    },
+    {
+      "id": 2,
+      "username": "sara87",
+      "fullName": "Sara Karimi",
+      "email": "sara.karimi@example.com",
+      "avatar": "https://i.pravatar.cc/150?img=2",
+      "bio": "UI/UX designer passionate about minimal design.",
+      "location": "Espoo, Finland",
+      "followers": 200,
+      "following": 180,
+      "joined": "2022-08-22"
+    },
+    {
+      "id": 3,
+      "username": "ali_dev",
+      "fullName": "Ali Rezaei",
+      "email": "ali.rezaei@example.com",
+      "avatar": "https://i.pravatar.cc/150?img=3",
+      "bio": "Backend engineer, coffee enthusiast.",
+      "location": "Tampere, Finland",
+      "followers": 95,
+      "following": 50,
+      "joined": "2021-11-05"
+    }
+  ]
+}

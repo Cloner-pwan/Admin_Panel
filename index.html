@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,72 +8,110 @@
     <script src="./src/js/main.js" type="module" defer></script>
   </head>
   <body>
-    <div class="container_panel w-full h-screen flex grow-0">
+    <div class="container_panel flex h-screen w-full grow-0">
       <!-- side panel starts -->
-      <div class="side_panel w-[300px] h-full bg-gray-100 drop-shadow-2xl flex flex-col">
-        <h1 class="text-center text-xl p-4 font-mono shadow">
-          {name} Admin Panel
-        </h1>
-        <div class="menu_container w-full h-full flex flex-col space-y-3">
-          <div
-            class="menu_items w-full h-15 flex items-center p-4 gap-4 hover:bg-gray-200 transition-all ease-in-out duration-300 cursor-pointer"
-          >
-            <img src="./svg/home.svg" alt="svg" class="w-6 h-6" />
+      <div class="side_panel flex h-full w-[300px] flex-col bg-gray-100 drop-shadow-2xl">
+        <div id="profile_side_panel" class="flex items-center gap-4 p-4 shadow">
+          <img id="profile_pic" src="./src/images/avatar.png" alt="profile" class="h-16 w-16 rounded-full" />
+          <span id="user_side_panel_name" class="font-mono text-[16px]">{fullname}</span>
+        </div>
+        <div class="menu_container flex h-full w-full flex-col">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+            <img src="./svg/home.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Home</p>
           </div>
-          <div
-            class="menu_items w-full h-15 flex items-center p-4 gap-4 hover:bg-gray-200 transition-all ease-in-out duration-300 cursor-pointer"
-          >
-            <img src="./svg/dashboard.svg" alt="svg" class="w-6 h-6" />
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+            <img src="./svg/dashboard.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Dashboard</p>
           </div>
-          <div
-            class="menu_items w-full h-15 flex items-center p-4 gap-4 hover:bg-gray-200 transition-all ease-in-out duration-300 cursor-pointer"
-          >
-            <img src="./svg/notification.svg" alt="svg" class="w-6 h-6" />
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+            <img src="./svg/notification.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Notification</p>
           </div>
-          <div
-            class="menu_items w-full h-15 flex items-center p-4 gap-4 hover:bg-gray-200 transition-all ease-in-out duration-300 cursor-pointer"
-          >
-            <img src="./svg/setting.svg" class="w-6 h-6" alt="svg" />
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+            <img src="./svg/setting.svg" class="h-6 w-6" alt="svg" />
             <p class="font-semibold">Settings</p>
           </div>
         </div>
+        <div id="resizer" class="absolute top-0 right-0 h-full w-2 cursor-ew-resize bg-transparent"></div>
       </div>
       <!-- side panel ends -->
-      <div class="content flex-1 h-full bg-gray-100 p-5">
-        <div id="Home" class="item_content w-full h-full space-y-5">
-          <h1 class="w-full h-fit text-2xl font-semibold">Home Page</h1>
-            <p class="text-[14px] text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam, corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem, quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
-            </p>
+
+      <div class="content h-full flex-1 bg-gray-100 p-5">
+        <div id="Home" class="item_content h-full w-full space-y-5">
+          <h1 class="text-2xl font-semibold">Home page</h1>
+          <p class="text-justify text-[14px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
+            corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
+            incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
+            reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis
+            eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem,
+            quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur
+            recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet
+            laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus
+            nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum
+            exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum
+            magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam
+            voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima
+            quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
+          </p>
         </div>
-        <div id="Dashboard" class="item_content w-full h-full space-y-5 hidden">
-          <h1 class="w-full h-fit text-2xl font-semibold">Dashboard Page</h1>
-            <p class="text-[14px] text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam, corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem, quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
-            </p>
+        <div id="Dashboard" class="item_content hidden h-full w-full space-y-5">
+          <h1 class="h-fit w-full text-2xl font-semibold">Dashboard Page</h1>
+          <p class="text-justify text-[14px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
+            corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
+            incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
+            reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis
+            eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem,
+            quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur
+            recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet
+            laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus
+            nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum
+            exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum
+            magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam
+            voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima
+            quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
+          </p>
         </div>
-        <div id="Notification" class="item_content w-full h-full space-y-5 hidden">
-          <h1 class="w-full h-fit text-2xl font-semibold">Notification</h1>
-            <p class="text-[14px] text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam, corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem, quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
-            </p>
+        <div id="Notification" class="item_content hidden h-full w-full space-y-5">
+          <h1 class="h-fit w-full text-2xl font-semibold">Notification</h1>
+          <p class="text-justify text-[14px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
+            corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
+            incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
+            reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis
+            eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem,
+            quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur
+            recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet
+            laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus
+            nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum
+            exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum
+            magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam
+            voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima
+            quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
+          </p>
         </div>
-        <div id="Settings" class="item_content w-full h-full space-y-5 hidden">
-          <h1 class="w-full h-fit text-2xl font-semibold">Settings Page</h1>
-            <p class="text-[14px] text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam, corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem, quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
-            </p>
+        <div id="Settings" class="item_content hidden h-full w-full space-y-5">
+          <h1 class="h-fit w-full text-2xl font-semibold">Settings Page</h1>
+          <p class="text-justify text-[14px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
+            corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
+            incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
+            reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis
+            eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem,
+            quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur
+            recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet
+            laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus
+            nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum
+            exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum
+            magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam
+            voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima
+            quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
+          </p>
         </div>
       </div>
     </div>
-    <button
-      id="darkMode"
-      class="w-[48px] h-[48px] rounded-full bg-emerald-700 fixed bottom-10 right-5 text-white"
-    >
-      DM
-    </button>
+    <button id="darkMode" class="fixed right-5 bottom-10 h-[48px] w-[48px] cursor-pointer rounded-full bg-emerald-700 text-white">DM</button>
   </body>
 </html>

@@ -19,7 +19,32 @@ let admin_panel = () => {
       content.classList.remove("hidden");
     });
   }
+  function resizing_side_panel() {
+    const sidePanel = document.querySelector(".side_panel");
+    const resizer = document.getElementById("resizer");
 
+    let isResizing = false;
+
+    resizer.addEventListener("mousedown", (e) => {
+      isResizing = true;
+      document.body.style.cursor = "ew-resize"; // change cursor globally
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (!isResizing) return;
+
+      let newWidth = e.clientX;
+      if (newWidth < 200) newWidth = 200; // min width
+      if (newWidth > 600) newWidth = 600; // max width
+
+      sidePanel.style.width = newWidth + "px";
+    });
+
+    window.addEventListener("mouseup", () => {
+      isResizing = false;
+      document.body.style.cursor = "default";
+    });
+  }
   function darkMode() {
     document.querySelector("#darkMode").addEventListener("click", () => {
       document.querySelector("html").classList.toggle("dark");
@@ -27,5 +52,6 @@ let admin_panel = () => {
   }
   side_panel();
   darkMode();
+  resizing_side_panel();
 };
 export default admin_panel;
