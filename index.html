@@ -16,19 +16,19 @@
           <span id="user_side_panel_name" class="font-mono text-[16px]">{fullname}</span>
         </div>
         <div class="menu_container flex h-full w-full flex-col">
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 border-l-[6px] border-transparent">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-rose-600 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
             <img src="./svg/home.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Home</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 border-l-[6px] border-transparent">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
             <img src="./svg/dashboard.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Dashboard</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 border-l-[6px] border-transparent">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
             <img src="./svg/notification.svg" alt="svg" class="h-6 w-6" />
             <p class="font-semibold">Notification</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 border-l-[6px] border-transparent">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
             <img src="./svg/setting.svg" class="h-6 w-6" alt="svg" />
             <p class="font-semibold">Settings</p>
           </div>
@@ -37,8 +37,9 @@
       </div>
       <!-- side panel ends -->
 
+      <!-- content of the side panel starts -->
       <div class="content h-full flex-1 bg-gray-100 p-5">
-        <div id="Home" class="item_content h-full w-full space-y-5">
+        <div id="Home" class="item_content hidden h-full w-full space-y-5">
           <h1 class="text-2xl font-semibold">Home page</h1>
           <p class="text-justify text-[14px]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
@@ -56,23 +57,25 @@
             quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
           </p>
         </div>
-        <div id="Dashboard" class="item_content hidden h-full w-full space-y-5">
+        <div id="Dashboard" class="item_content h-full w-full space-y-5">
           <h1 class="h-fit w-full text-2xl font-semibold">Dashboard Page</h1>
-          <p class="text-justify text-[14px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
-            corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
-            incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
-            reprehenderit quis cupiditate quo aspernatur voluptatum quisquam eius ad. Aut minima quidem recusandae molestiae laudantium asperiores velit facilis at est, itaque et! Consequuntur nobis
-            eaque voluptas explicabo libero voluptates. Cumque atque amet recusandae ut fugit id hic veritatis esse sint? Cum adipisci accusamus laudantium, quaerat numquam vel molestiae! Voluptatem,
-            quo quod blanditiis incidunt distinctio laboriosam iure consequatur a culpa repudiandae. Non, fugit cum. Laudantium aperiam minima esse illum consequatur animi, voluptate aspernatur
-            recusandae, culpa exercitationem, repudiandae dolore blanditiis accusantium. Maxime fugit, suscipit impedit, ipsum cum, inventore beatae explicabo consequuntur ipsa ad architecto. Amet
-            laboriosam vitae obcaecati eius tempore iste libero voluptate alias expedita, voluptatibus consequuntur aliquam aut nesciunt? Aspernatur, nemo facere veniam voluptas aperiam voluptatibus
-            nisi, corrupti aut velit totam autem est nobis voluptates? Quibusdam maiores officiis natus totam, debitis maxime eaque nulla in sit labore ducimus inventore tenetur sed dolorum
-            exercitationem adipisci aspernatur accusantium! Earum eos ullam sit repudiandae, aut accusantium id vitae molestiae asperiores omnis, maiores aperiam minima pariatur exercitationem! Eum
-            magni a obcaecati fugiat ut. Consequuntur, consectetur! Placeat dolore mollitia necessitatibus. Excepturi quasi dicta, cupiditate adipisci ab a ea repellendus deserunt, illo nulla quisquam
-            voluptate architecto nesciunt assumenda eligendi minus asperiores eos beatae sequi! Molestias itaque explicabo quia vitae, dolor nisi corporis ex aperiam eligendi quos dolorem minima
-            quibusdam recusandae omnis eum. Nam officia odit quidem corporis blanditiis, laborum cumque. Esse, facilis laudantium!
-          </p>
+          <h3 class="text-xl font-semibold">Users</h3>
+          <!-- fullname username email follower following actions -->
+          <div class="overflow-x-auto rounded-lg bg-white shadow">
+            <table class="min-w-full table-auto text-left text-sm">
+              <thead class="bg-[#f3f4f6] font-bold text-gray-700">
+                <tr>
+                  <td class="px-4 py-2">Fullname</td>
+                  <td class="px-4 py-2">Username</td>
+                  <td class="px-4 py-2">Email</td>
+                  <td class="px-4 py-2">Follower</td>
+                  <td class="px-4 py-2">Following</td>
+                  <td class="px-4 py-2">actions</td>
+                </tr>
+              </thead>
+              <tbody id="tbody" class="text-left"></tbody>
+            </table>
+          </div>
         </div>
         <div id="Notification" class="item_content hidden h-full w-full space-y-5">
           <h1 class="h-fit w-full text-2xl font-semibold">Notification</h1>
@@ -111,6 +114,7 @@
           </p>
         </div>
       </div>
+      <!-- content of the side panel starts -->
     </div>
     <button id="darkMode" class="fixed right-5 bottom-10 h-[48px] w-[48px] cursor-pointer rounded-full bg-emerald-700 text-white">DM</button>
   </body>
