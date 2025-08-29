@@ -1,2 +1,169 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  /* buttons start */
+  .btn {
+    @apply flex cursor-pointer items-center justify-center rounded-md text-white transition-all duration-300;
+  }
+  .btn-pad {
+    @apply px-4 py-2;
+  }
+  .btn-sm {
+    @apply h-[32px] w-[64px] text-sm;
+  }
+  .btn-md {
+    @apply h-[42px] w-[100px];
+  }
+  .btn-lg {
+    @apply h-[48px] w-[120px];
+  }
+  .teal-btn {
+    @apply bg-teal-600 hover:bg-teal-700;
+  }
+  .light-teal-btn {
+    @apply bg-teal-500 hover:bg-teal-600;
+  }
+  .dark-teal-btn {
+    @apply bg-teal-800 hover:bg-teal-900;
+  }
+  .blue-btn {
+    @apply bg-blue-600 hover:bg-blue-700;
+  }
+  .light-blue-btn {
+    @apply bg-blue-400 hover:bg-blue-500;
+  }
+  .dark-blue-btn {
+    @apply bg-blue-800 hover:bg-blue-900;
+  }
+  .indigo-btn {
+    @apply bg-indigo-600 hover:bg-indigo-800;
+  }
+  .light-indigo-btn {
+    @apply bg-indigo-400 hover:bg-indigo-500;
+  }
+  .dark-indigo-btn {
+    @apply bg-indigo-800 hover:bg-indigo-900;
+  }
+  .cyan-btn {
+    @apply bg-cyan-600 hover:bg-cyan-700;
+  }
+  .light-cyan-btn {
+    @apply bg-cyan-400 hover:bg-cyan-500;
+  }
+  .dark-cyan-btn {
+    @apply bg-cyan-800 hover:bg-cyan-900;
+  }
+  .rose-btn {
+    @apply bg-rose-600 hover:bg-rose-700;
+  }
+  .light-rose-btn {
+    @apply bg-rose-400 hover:bg-rose-500;
+  }
+  .dark-rose-btn {
+    @apply bg-rose-800 hover:bg-rose-900;
+  }
+  .orange-btn {
+    @apply bg-orange-600 hover:bg-orange-700;
+  }
+  .light-orange-btn {
+    @apply bg-orange-400 hover:bg-orange-500;
+  }
+  .dark-orange-btn {
+    @apply bg-orange-700 hover:bg-orange-800;
+  }
+  .emerald-btn {
+    @apply bg-emerald-600 hover:bg-emerald-700;
+  }
+  .light-emerald-btn {
+    @apply bg-emerald-400 hover:bg-emerald-500;
+  }
+  .dark-emerald-btn {
+    @apply bg-emerald-800 hover:bg-emerald-900;
+  }
+  .lime-btn {
+    @apply bg-lime-600 hover:bg-lime-700;
+  }
+  .light-lime-btn {
+    @apply bg-lime-400 hover:bg-lime-500;
+  }
+  .dark-lime-btn {
+    @apply bg-lime-800 hover:bg-lime-900;
+  }
+  .btn-warning {
+    @apply bg-yellow-400 hover:bg-yellow-500;
+  }
+  .btn-success {
+    @apply bg-emerald-500 hover:bg-emerald-600;
+  }
+  .btn-error {
+    @apply bg-red-600 hover:bg-red-700;
+  }
+  .btn-info {
+    @apply bg-blue-500 hover:bg-blue-600;
+  }
+  /* buttons end */
+  /* ---------------------------------------------------- */
+  .alert {
+    @apply flex h-[48px] w-full items-center gap-3 rounded px-4 py-3 transition-opacity duration-300;
+  }
+
+  .alert-close {
+    @apply ms-auto flex h-[32px] w-[32px] cursor-pointer items-center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3e%3cline x1='18' y1='6' x2='6' y2='18' /%3e%3cline x1='6' y1='6' x2='18' y2='18' /%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+  }
+  .alert-error {
+    @apply border border-[#f5c2c7] bg-[#f8d7da] text-[#842029];
+  }
+  .alert-success {
+    @apply border border-[#aad8c4] bg-[#d1e7dd] text-[#0f5132];
+  }
+  .alert-info {
+    @apply border border-[#a2dce8] bg-[#cff4fc] text-[#055160];
+  }
+  .alert-warning {
+    @apply border border-[#f3e1ac] bg-[#fff3cd] text-[#664d03];
+  }
+  .aero-alert {
+    @apply relative flex w-full max-w-md items-center gap-4 rounded-2xl border border-white/40 bg-white/60 px-5 py-4 shadow-lg shadow-black/10 backdrop-blur-sm transition-opacity duration-300;
+  }
+  .aero-alert-close {
+    @apply absolute end-3 top-3 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-white/40 transition duration-200 ease-in-out active:bg-white/90;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24'%3e%3cline x1='18' y1='6' x2='6' y2='18' /%3e%3cline x1='6' y1='6' x2='18' y2='18' /%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+    opacity: 0.8;
+  }
+  .aero-alert-close:hover {
+    @apply bg-white/80 opacity-100 shadow-md;
+  }
+  .aero-alert-error {
+    @apply border-red-300 bg-gradient-to-b from-red-100/70 to-red-50/50 text-red-900;
+    box-shadow: 0 8px 20px rgb(220 38 38 / 0.15);
+  }
+  .aero-alert-success {
+    @apply border-emerald-300 bg-gradient-to-b from-emerald-100/70 to-emerald-50/50 text-emerald-900;
+    box-shadow: 0 8px 20px rgb(5 150 105 / 0.15);
+  }
+  .aero-alert-info {
+    @apply border-sky-300 bg-gradient-to-b from-sky-100/70 to-sky-50/50 text-sky-900;
+    box-shadow: 0 8px 20px rgb(14 165 233 / 0.15);
+  }
+  .aero-alert-warning {
+    @apply border-amber-300 bg-gradient-to-b from-amber-100/70 to-amber-50/50 text-amber-900;
+    box-shadow: 0 8px 20px rgb(202 138 4 / 0.15);
+  }
+  .dir-rtl {
+    direction: rtl;
+  }
+  .dir-ltr {
+    direction: ltr;
+  }
+  .svg {
+    @apply h-6 w-6;
+  }
+}

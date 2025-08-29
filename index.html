@@ -6,6 +6,7 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" href="./dist/output.css" type="text/css" />
     <script src="./src/js/main.js" type="module" defer></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
   </head>
   <body>
     <div class="container_panel flex h-screen w-full grow-0">
@@ -61,16 +62,17 @@
           <h1 class="h-fit w-full text-2xl font-semibold">Dashboard Page</h1>
           <h3 class="text-xl font-semibold">Users</h3>
           <!-- fullname username email follower following actions -->
+          <button id="export_btn" class="btn btn-pad emerald-btn rounded-sm font-semibold">Export to XLSX</button>
           <div class="overflow-x-auto rounded-lg bg-white shadow">
-            <table class="min-w-full table-auto text-left text-sm">
+            <table id="TableToExport" class="min-w-full table-auto text-left text-sm">
               <thead class="bg-[#f3f4f6] font-bold text-gray-700">
                 <tr>
-                  <td class="px-4 py-2">Fullname</td>
-                  <td class="px-4 py-2">Username</td>
-                  <td class="px-4 py-2">Email</td>
-                  <td class="px-4 py-2">Follower</td>
-                  <td class="px-4 py-2">Following</td>
-                  <td class="px-4 py-2">actions</td>
+                  <td class="px-4 py-3">Fullname</td>
+                  <td class="px-4 py-3">Username</td>
+                  <td class="px-4 py-3">Email</td>
+                  <td class="px-4 py-3">Follower</td>
+                  <td class="px-4 py-3">Following</td>
+                  <td class="px-4 py-3">actions</td>
                 </tr>
               </thead>
               <tbody id="tbody" class="text-left"></tbody>

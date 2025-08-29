@@ -54,6 +54,15 @@ let admin_panel = () => {
       document.querySelector('html').classList.toggle('dark');
     });
   }
+  function exportToXLSX() {
+    let export_btn = document.querySelector('#export_btn');
+    export_btn.addEventListener('click', () => {
+      let table = document.querySelector('#TableToExport');
+      let wb = XLSX.utils.table_to_book(table);
+      XLSX.writeFile(wb, 'export.xlsx');
+    });
+  }
+  exportToXLSX();
   side_panel();
   darkMode();
   resizing_side_panel();
