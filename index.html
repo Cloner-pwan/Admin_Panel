@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,27 +11,27 @@
   <body>
     <div class="container_panel flex h-screen w-full grow-0">
       <!-- side panel starts -->
-      <div class="side_panel flex h-full w-[300px] flex-col bg-gray-100 drop-shadow-2xl">
+      <div class="side_panel flex h-full w-[300px] flex-col bg-gray-100 dark:bg-[#31363F] drop-shadow-2xl">
         <div id="profile_side_panel" class="flex items-center gap-4 p-4 shadow">
           <img id="profile_pic" src="./src/images/avatar.png" alt="profile" class="h-16 w-16 cursor-pointer rounded-full" />
-          <span id="user_side_panel_name" class="font-mono text-[16px]">{fullname}</span>
+          <span id="user_side_panel_name" class="font-mono text-[16px] dark:text-[#ECDFCC]">{fullname}</span>
         </div>
         <div class="menu_container flex h-full w-full flex-col">
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-rose-600 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-rose-600 p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-[#3e434b]">
             <img src="./svg/home.svg" alt="svg" class="h-6 w-6" />
-            <p class="font-semibold">Home</p>
+            <p class="font-semibold dark:text-[#ECDFCC]">Home</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-[#3e434b]">
             <img src="./svg/dashboard.svg" alt="svg" class="h-6 w-6" />
-            <p class="font-semibold">Dashboard</p>
+            <p class="font-semibold dark:text-[#ECDFCC]">Dashboard</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-[#3e434b]">
             <img src="./svg/notification.svg" alt="svg" class="h-6 w-6" />
-            <p class="font-semibold">Notification</p>
+            <p class="font-semibold dark:text-[#ECDFCC]">Notification</p>
           </div>
-          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200">
+          <div class="menu_items flex h-16 w-full cursor-pointer items-center gap-4 border-l-[6px] border-transparent p-4 transition-all duration-300 ease-in-out hover:bg-gray-200 dark:hover:bg-[#3e434b]">
             <img src="./svg/setting.svg" class="h-6 w-6" alt="svg" />
-            <p class="font-semibold">Settings</p>
+            <p class="font-semibold dark:text-[#ECDFCC]">Settings</p>
           </div>
         </div>
         <div id="resizer" class="absolute top-0 right-0 h-full w-2 cursor-ew-resize bg-transparent"></div>
@@ -39,10 +39,10 @@
       <!-- side panel ends -->
 
       <!-- content of the side panel starts -->
-      <div class="content h-full flex-1 bg-gray-100 p-5">
+      <div class="content h-full flex-1 bg-gray-100 dark:bg-[#222831] p-5">
         <div id="Home" class="item_content hidden h-full w-full space-y-5">
-          <h1 class="text-2xl font-semibold">Home page</h1>
-          <p class="text-justify text-[14px]">
+          <h1 class="text-2xl font-semibold dark:text-[#ECDFCC]">Home page</h1>
+          <p class="text-justify text-[14px] dark:text-[#ECDFCC]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
             corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
             incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
@@ -59,8 +59,8 @@
           </p>
         </div>
         <div id="Dashboard" class="item_content h-full w-full space-y-5">
-          <h1 class="h-fit w-full text-2xl font-semibold">Dashboard Page</h1>
-          <h3 class="text-xl font-semibold">Users</h3>
+          <h1 class="h-fit w-full text-2xl font-semibold dark:text-[#ECDFCC]">Dashboard Page</h1>
+          <h3 class="text-xl font-semibold dark:text-[#ECDFCC]">Users</h3>
           <!-- fullname username email follower following actions -->
           <button id="export_btn" class="btn btn-pad emerald-btn rounded-sm font-semibold">Export to XLSX</button>
           <div class="overflow-x-auto rounded-lg bg-white shadow">
@@ -80,8 +80,8 @@
           </div>
         </div>
         <div id="Notification" class="item_content hidden h-full w-full space-y-5">
-          <h1 class="h-fit w-full text-2xl font-semibold">Notification</h1>
-          <p class="text-justify text-[14px]">
+          <h1 class="h-fit w-full text-2xl font-semibold dark:text-[#ECDFCC]">Notification</h1>
+          <p class="text-justify text-[14px] dark:text-[#ECDFCC]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
             corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
             incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
@@ -98,8 +98,8 @@
           </p>
         </div>
         <div id="Settings" class="item_content hidden h-full w-full space-y-5">
-          <h1 class="h-fit w-full text-2xl font-semibold">Settings Page</h1>
-          <p class="text-justify text-[14px]">
+          <h1 class="h-fit w-full text-2xl font-semibold dark:text-[#ECDFCC]">Settings Page</h1>
+          <p class="text-justify text-[14px] dark:text-[#ECDFCC]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tempore tempora repudiandae nostrum iste in, voluptatem nihil quis beatae. Recusandae culpa iure, possimus quo ipsam,
             corporis quidem nulla doloribus minima voluptates sapiente provident distinctio! Eum amet omnis repellat molestiae. Odit fugit ipsum adipisci non facilis, dolorem eum qui vero, officia
             incidunt pariatur amet explicabo nemo cumque quisquam aut illo perferendis labore facere. Eaque animi assumenda labore repudiandae explicabo sit ipsum autem modi, rerum blanditiis
