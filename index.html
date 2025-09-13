@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -118,6 +118,9 @@
       </div>
       <!-- content of the side panel starts -->
     </div>
-    <button id="darkMode" class="fixed right-5 bottom-10 h-[48px] w-[48px] cursor-pointer rounded-full bg-emerald-700 text-white">DM</button>
+    <button id="darkMode" class="w-fit h-fit fixed right-5 bottom-10 cursor-pointer rounded-full text-white">
+      <img src="/svg/moon.svg" alt="darkMode" class="darkModeSvg w-12 h-12">
+      <img src="/svg/sun.svg" alt="lightMode" class="darkModeSvg w-12 h-12 hidden">
+    </button>
   </body>
 </html>

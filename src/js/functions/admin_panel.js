@@ -50,8 +50,19 @@ let admin_panel = () => {
     });
   }
   function darkMode() {
-    document.querySelector('#darkMode').addEventListener('click', () => {
-      document.querySelector('html').classList.toggle('dark');
+    let darkMode = document.querySelector('#darkMode');
+    let html = document.querySelector('html');
+    let darkModeSvg = document.querySelectorAll('.darkModeSvg');
+
+    darkMode.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      darkModeSvg.forEach((el) => {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
     });
   }
   function exportToXLSX() {
